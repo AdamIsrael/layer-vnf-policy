@@ -17,6 +17,7 @@ from charms.reactive import (
 @when_not('vnf-policy.installed')
 def install_vnf_b():
     set_flag('vnf-policy.installed')
+    status_set('active', 'Ready!')
 
 
 @when('actions.set-policy')
