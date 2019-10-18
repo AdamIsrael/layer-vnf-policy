@@ -14,6 +14,7 @@ from charms.reactive import (
 )
 
 
+@when('sshproxy.configured')
 @when_not('vnf-policy.installed')
 def install_vnf_b():
     set_flag('vnf-policy.installed')
